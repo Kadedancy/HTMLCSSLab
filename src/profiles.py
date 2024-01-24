@@ -24,3 +24,4 @@ class Handler(tornado.web.RequestHandler):
         dob =accountDatabase[uname]["dateOfBirth"]
         email =accountDatabase[uname]["email"]
         self.render( "../html/ProfilePage.html", uname = uname, realname = realname, dob = dob, email = email )
+
