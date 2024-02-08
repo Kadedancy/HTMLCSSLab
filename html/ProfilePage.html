@@ -33,16 +33,24 @@
         <p>Email: {{email}}</p>
     </section>
 
-    <table>
-        <tr><td>First Name: </td><td><input id="fname"></td>
-        <tr><td>Last Name:  </td><td><input id="lname"></td>
-        <tr><td>Date of Birth:  </td><td><input id="birthdate" type='date'></td>
-    </table>
+    <form id="profileForm" enctype="multipart/form-data">
+        <table>
+            <tr><td>First Name: </td><td><input id="fname"></td></tr>
+            <tr><td>Last Name:  </td><td><input id="lname"></td></tr>
+            <tr><td>Date of Birth:  </td><td><input id="birthdate" type='date'></td></tr>
+            <tr>
+                <td>Profile Picture: </td>
+                <td>
+                    <label for="picture" style="cursor: pointer;">Choose a file</label>
+                    <input id="picture" type='file' accept="image/*" style="display: none;">
+                </td>
+            </tr>
+        </table>
 
-    <button onclick="submit()">Submit</button>
+        <button type="button" onclick="submit()">Submit</button>
+    </form>
 
     <script src="/static/updateprofile.js"></script>
-
 </body>
 
 </html>
