@@ -23,13 +23,13 @@
     </header>
 
     <section>
-        <img src="/static/{{uname}}.png" alt="{{uname}}'s Profile Picture" style="padding: 10px">
+        <img id="proPicture" src="/static/{{uname}}.png" alt="{{uname}}'s Profile Picture" style="padding: 10px; width: 300px; height: 200px; ">
     </section>
 
     <section>
         <p>Username: {{uname}}</p>
-        <p>Full Name: {{realname}}</p>
-        <p>Date of Birth: {{dob}}</p>
+        <p id="realname">Full Name: {{realname}}</p>
+        <p id="birthDate">Date of Birth: {{dob}}</p>
         <p>Email: {{email}}</p>
     </section>
 
@@ -37,16 +37,14 @@
         <table>
             <tr><td>First Name: </td><td><input id="fname"></td></tr>
             <tr><td>Last Name:  </td><td><input id="lname"></td></tr>
-            <tr><td>Date of Birth:  </td><td><input id="birthdate" type='date'></td></tr>
+            <tr><td>Date of Birth:  </td><td><input id="dob" type='date'></td></tr>
             <tr>
                 <td>Profile Picture: </td>
-                <td>
-                    <input id="picture" type='file' accept="image/*">
-                </td>
+                <td><input id="picture" type='file' accept="image/*"></td>
             </tr>
         </table>
 
-        <button type="button" onclick="submit()">Submit</button>
+        <button type="button" onclick="update()">Submit</button>
     </form>
 
     <script src="/static/updateprofile.js"></script>

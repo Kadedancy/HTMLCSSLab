@@ -9,9 +9,10 @@ class Handler(tornado.web.RequestHandler):
         firstName = J["firstName"]
         lastName = J["lastName"]
         dob = J["birthDate"]
-        picture = J["picture"]
+        
 
         print("WE GOT:", firstName, lastName, dob)
-        resp = {"ok": True}
+        resp = {"ok": True }
+
 
         self.write(json.dumps(resp))
